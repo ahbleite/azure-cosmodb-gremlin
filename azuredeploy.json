@@ -142,7 +142,7 @@
         {
             "type": "Microsoft.DocumentDB/databaseAccounts",
             "name": "[variables('accountName')]",
-            "apiVersion": "2016-03-31",
+            "apiVersion": "2015-04-08",
             "location": "[parameters('location')]",
             "tags": {},
             "kind": "GlobalDocumentDB",
@@ -162,7 +162,7 @@
         {
             "type": "Microsoft.DocumentDB/databaseAccounts/apis/databases",
             "name": "[concat(variables('accountName'), '/gremlin/', parameters('databaseName'))]",
-            "apiVersion": "2016-03-31",
+            "apiVersion": "2015-04-08",
             "dependsOn": [
                 "[resourceId('Microsoft.DocumentDB/databaseAccounts/', variables('accountName'))]"
             ],
@@ -178,7 +178,7 @@
         {
             "type": "Microsoft.DocumentDb/databaseAccounts/apis/databases/graphs",
             "name": "[concat(variables('accountName'), '/gremlin/', parameters('databaseName'), '/', parameters('graph1Name'))]",
-            "apiVersion": "2016-03-31",
+            "apiVersion": "2015-04-08",
             "dependsOn": [
                 "[resourceId('Microsoft.DocumentDB/databaseAccounts/apis/databases', variables('accountName'), 'gremlin', parameters('databaseName'))]"
             ],
